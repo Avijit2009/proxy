@@ -1,3 +1,4 @@
-FROM quay.io/whatsapp/whatsapp-proxy:latest
+FROM nginx:latest
+COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
-CMD []
+CMD ["nginx", "-g", "daemon off;"]
